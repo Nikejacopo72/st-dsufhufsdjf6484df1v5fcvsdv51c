@@ -1,5 +1,5 @@
-pip install seaborn 
-pip install numpy
-pip install scipy.stats
-pip install matplotlib.pyplot
+seaborn 
+numpy
+scipy.stats
+matplotlib.pyplot
 
