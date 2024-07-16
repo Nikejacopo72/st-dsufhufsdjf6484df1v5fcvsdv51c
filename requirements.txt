@@ -3,4 +3,4 @@ pandas
 numpy 
 norm
 seaborn
-scipy.stats
+
