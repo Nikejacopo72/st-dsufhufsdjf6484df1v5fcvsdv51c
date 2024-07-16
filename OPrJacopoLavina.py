@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import math
 import seaborn as sns
-import norm
+from scipy import stats
 import matplotlib.pyplot as plt
 
 st.set_page_config(layout='wide', initial_sidebar_state='expanded')
@@ -40,8 +40,8 @@ d1 = (np.log(S/K) + (r + 0.5 * vol**2) * T) / (vol * math.sqrt(T))
 
 d2 = d1 - (vol * math.sqrt(T))
 
-call_value = S * norm.cdf(d1) - K * math.exp(-r * T) * norm.cdf(d2)
-put_value = K * math.exp(-r * T) * norm.cdf(-d2) - S * norm.cdf(-d1)
+call_value = S * stats.norm.cdf(d1) - K * math.exp(-r * T) * stats.norm.cdf(d2)
+put_value = K * math.exp(-r * T) * stats.norm.cdf(-d2) - S * stats.norm.cdf(-d1)
 
 st.markdown(f"""
 <style>
@@ -101,8 +101,8 @@ st.markdown(f"""
 def black_scholes(S, K, T, r, vol):
     d1 = (np.log(S / K) + (r + 0.5 * vol**2) * T) / (vol * math.sqrt(T))
     d2 = d1 - vol * math.sqrt(T)
-    call_value = S * norm.cdf(d1) - K * math.exp(-r * T) * norm.cdf(d2)
-    put_value = K * math.exp(-r * T) * norm.cdf(-d2) - S * norm.cdf(-d1)
+    call_value = S * stats.norm.cdf(d1) - K * math.exp(-r * T) * stats.norm.cdf(d2)
+    put_value = K * math.exp(-r * T) * stats.norm.cdf(-d2) - S * stats.norm.cdf(-d1)
     return call_value, put_value
 
 st.header("Heatmap Call and Put Options Prices")
