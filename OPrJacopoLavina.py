@@ -89,11 +89,11 @@ st.markdown(f"""
 <div style="display: flex; justify-content: space-around; margin-top: 15px; margin-bottom:15px">
     <div style="background-color: #57E657; padding: 20px; border-radius: 20px; width: 35%; text-align: center;">
         <h3>CALL Value</h3>
-        <p style="font-size: 24px; font-weight: bold;">${call_value:.2f}</p>
+        <p style="font-size: 24px; font-weight: bold;">${call_value}</p>
     </div>
     <div style="background-color: #F33914; padding: 20px; border-radius: 20px; width: 35%; text-align: center;">
         <h3>PUT Value</h3>
-        <p style="font-size: 24px; font-weight: bold;">${put_value:.2f}</p>
+        <p style="font-size: 24px; font-weight: bold;">${put_value}</p>
     </div>
 </div>
 """, unsafe_allow_html=True)
