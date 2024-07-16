@@ -1,6 +1,7 @@
-
-seaborn 
-numpy
-scipy.stats
-matplotlib.pyplot
-
+streamlit 
+pandas
+numpy 
+math
+norm
+seaborn
+matplotlib.pyplot 
