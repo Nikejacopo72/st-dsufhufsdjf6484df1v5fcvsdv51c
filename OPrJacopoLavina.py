@@ -38,7 +38,7 @@ vol =  risk_free_rate # volatility (sigma) (standard deviation of the stock pric
 
 d1 = (np.log(S/K) + (r + 0.5 * vol**2) * T) / (vol * math.sqrt(T))
 
-d2 = d1 - (vol * math.sqrt(T))
+d2 = d1 - vol * math.sqrt(T)
 
 call_value = S * stats.norm.cdf(d1) - K * math.exp(-r * T) * stats.norm.cdf(d2)
 put_value = K * math.exp(-r * T) * stats.norm.cdf(-d2) - S * stats.norm.cdf(-d1)
