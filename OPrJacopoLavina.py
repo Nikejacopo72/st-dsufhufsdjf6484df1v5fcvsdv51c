@@ -13,11 +13,11 @@ st.sidebar.subheader('Created by:')
 
 st.sidebar.link_button(':link: :blue[Lavina Jacopo Linkedin Profile]', "http://www.linkedin.com/in/jacopo-lavina")
 
-current_asset_price = st.sidebar.number_input('Current Asset Price', value=100.00, step=0.01, format="%.2f", key='CurrentAssetPrice')
-strike_price = st.sidebar.number_input('Strike Price', value=100.00, step=0.01, format="%.2f", key='StrikePrice')
+current_asset_price = st.sidebar.number_input('Current Asset Price', value=150.00, step=0.01, format="%.2f", key='CurrentAssetPrice')
+strike_price = st.sidebar.number_input('Strike Price', value=150.00, step=0.01, format="%.2f", key='StrikePrice')
 time_to_maturity = st.sidebar.number_input('Time to Maturity (Years)', value=1.00, step=0.01, format="%.2f", key='TimetoMaturity')
-volatility = st.sidebar.number_input('Volatility (σ)', value=0.20, step=0.01, format="%.2f", key='Volatility')
-risk_free_rate = st.sidebar.number_input('Risk-Free Interest Rate', value=0.05, step=0.01, format="%.2f", key='RiskFree')
+volatility = st.sidebar.number_input('Volatility (σ)', value=0.25, step=0.01, format="%.2f", key='Volatility')
+risk_free_rate = st.sidebar.number_input('Risk-Free Interest Rate', value=0.10, step=0.01, format="%.2f", key='RiskFree')
 
 st.sidebar.write("---") 
 
