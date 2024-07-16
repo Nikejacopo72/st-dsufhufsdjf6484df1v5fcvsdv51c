@@ -39,8 +39,8 @@ d1 = (np.log(S/K) + (r + 0.5 * vol**2) * T) / (vol * math.sqrt(T))
 
 d2 = d1 - (vol * math.sqrt(T))
 
-call_value = S * math.norm.cdf(d1) - K * math.exp(-r * T) * math.norm.cdf(d2)
-put_value = K * math.exp(-r * T) * math.norm.cdf(-d2) - S * math.norm.cdf(-d1)
+call_value = S * norm.cdf(d1) - K * math.exp(-r * T) * norm.cdf(d2)
+put_value = K * math.exp(-r * T) * norm.cdf(-d2) - S * norm.cdf(-d1)
 
 st.markdown(f"""
 <style>
@@ -100,8 +100,8 @@ st.markdown(f"""
 def black_scholes(S, K, T, r, vol):
     d1 = (np.log(S / K) + (r + 0.5 * vol**2) * T) / (vol * math.sqrt(T))
     d2 = d1 - vol * math.sqrt(T)
-    call_value = S * math.norm.cdf(d1) - K * math.exp(-r * T) * math.norm.cdf(d2)
-    put_value = K * math.exp(-r * T) * math.norm.cdf(-d2) - S * math.norm.cdf(-d1)
+    call_value = S * norm.cdf(d1) - K * math.exp(-r * T) * norm.cdf(d2)
+    put_value = K * math.exp(-r * T) * norm.cdf(-d2) - S * norm.cdf(-d1)
     return call_value, put_value
 
 st.header("Heatmap Call and Put Options Prices")
