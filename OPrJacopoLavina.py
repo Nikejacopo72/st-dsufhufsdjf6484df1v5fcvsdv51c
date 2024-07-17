@@ -33,8 +33,8 @@ st.title('Black-Sholes Option Pricing Model')
 S = current_asset_price # Underling price
 K =  strike_price # Strike price
 T = time_to_maturity # Time to Expiration (year)
-r = volatility # Risk-free ratio
-vol =  risk_free_rate # volatility (sigma) (standard deviation of the stock prices)
+r = risk_free_rate # Risk-free ratio
+vol = volatility # volatility (sigma) (standard deviation of the stock prices)
 
 d1 = (np.log(S/K) + (r + 0.5 * vol**2) * T) / (vol * math.sqrt(T))
 
