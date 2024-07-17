@@ -43,8 +43,6 @@ d2 = d1 - vol * math.sqrt(T)
 call_value = S * stats.norm.cdf(d1) - K * math.exp(-r * T) * stats.norm.cdf(d2)
 put_value = K * math.exp(-r * T) * stats.norm.cdf(-d2) - S * stats.norm.cdf(-d1)
 
-st.write(call_value)
-
 st.markdown(f"""
 <style>
     .table-container {{
