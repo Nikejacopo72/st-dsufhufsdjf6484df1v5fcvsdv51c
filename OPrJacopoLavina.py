@@ -23,9 +23,9 @@ st.sidebar.write("---")
 
 st.sidebar.subheader(':orange-background[Heat Map Parameters]')
 
-min_spot_price = st.sidebar.number_input('Min Spot Price', 0.00, 10000.00, 60.00, step=0.01)
-max_spot_price = st.sidebar.number_input('Max Spot Price', 0.00, 10000.00, 90.00, step=.001)
-min_volatility = st.sidebar.slider('Min Volatility for Heatmap', 0.01, 1.00, 0.18, step=0.01)
+min_spot_price = st.sidebar.number_input('Min Spot Price', 0.00, 10000.00, 120.00, step=0.01)
+max_spot_price = st.sidebar.number_input('Max Spot Price', 0.00, 10000.00, 150.00, step=.001)
+min_volatility = st.sidebar.slider('Min Volatility for Heatmap', 0.01, 1.00, 0.15, step=0.01)
 max_volatility = st.sidebar.slider('Max Volatility for Heatmap', 0.01, 1.00, 0.30, step=0.01)
 
 st.title('Black-Sholes Option Pricing Model')    
